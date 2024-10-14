@@ -33,7 +33,7 @@ def create_parser():
     #Model parameters
     parser.add_argument("--batch_size", default=8192, type=int, help="Select the batch size for GNN training")
     parser.add_argument("--n_epochs", default=100, type=int, help="Select the number of epochs for GNN training")
-    parser.add_argument('--num_neighs', nargs='+', default=[100,100], help='Pass the number of neighors to be sampled in each hop (descending).')
+    parser.add_argument('--num_neighs', nargs='+', type=int, default=[100,100], help='Pass the number of neighors to be sampled in each hop (descending).')
 
     #Misc
     parser.add_argument("--seed", default=1, type=int, help="Select the random seed for reproducability")
